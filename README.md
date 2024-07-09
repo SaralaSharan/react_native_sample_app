@@ -1,1 +1,1 @@
-# react_native_sample_app
+# react-native-introduction
