@@ -4,7 +4,7 @@ import { s } from "./App.style";
 import { ProfilCard } from "./components/ProfilCard/ProfilCard";
 import { AgeCounter } from "./components/AgeCounter/AgeCounter";
 import { useState } from "react";
-import { Linking } from "react-native-web";
+import { Linking, Platform } from "react-native-web";
 
 export default function App() {
   const [countClick, setCountClick] = useState(0);
@@ -35,6 +35,10 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={s.container}>
+        {/* Platform checker */}
+        {/* {Platform.OS === "android" && <Text> Hi on Android </Text>}
+        {Platform.OS === "ios" && <Text> Hi on IOS </Text>}
+        {Platform.OS === "web" && <Text> Hi on Web </Text>} */}
         <ProfilCard
           // onPressTitle={hello}
           onPressSocialMediaIcon={goToSocialMedia}
